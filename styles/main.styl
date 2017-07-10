@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic')
+
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'helpers/helpers.styl'
+
+@import 'base/base.styl'
+@import 'base/ui.styl'
+@import 'base/table.styl'
+@import 'base/typography.styl'
+@import 'base/animations.styl'
+@import 'base/icons.styl'
+@import 'base/modal.styl'
+
+@import 'modifications/modifications.styl'
+
+.grid--container
+  max-width 1146px
+
+.logo
+  &__icon
+    background url('../../img/logo.png') no-repeat
+    background-size contain
+    display inline-block
+    margin-right 3rem
+    size(53px, 68px)
+    vertical-align middle
+  &__text
+    display inline-block
+    font-family $font-header
+    font-size 3.6rem
+    font-weight 800
+    vertical-align middle
+
+
+.link
+  color $primary
+  border-bottom 1px solid rgba($primary, .2)
+  text-decoration none
+  &--small
+    display block
+    font-size 1.4rem
+    font-weight 600
+    & + .link--small
+      margin-top 1rem
+
+.main-header
+  color $main
+  padding 2.4rem 0
+
+@import 'base/media.styl'
+
+
