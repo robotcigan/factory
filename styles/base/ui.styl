@@ -6,11 +6,11 @@
   cursor pointer
   display inline-block
   font-family $font
-  font-size 1.4rem
+  font-size 1.6rem
   font-weight 600
   flex-shrink 0
   line-height 1
-  height 6rem
+  max-height 6rem
   padding 2.2rem 3.5rem
   text-decoration none
   text-transform uppercase
@@ -35,15 +35,6 @@
     &:hover
       border-color $primary - 15%
       color #fff
-  &--transparent
-    background-color transparent
-    color $primary
-    padding 2.2rem 1.5rem
-    // transform translateX(-1.5rem)
-    &:hover
-      background-color rgba($primary, .08)
-    .btn__icon + span
-      margin-left 1rem
   &--full-size
     padding 2.2rem 3rem
     text-align center
@@ -52,9 +43,8 @@
     border 1px solid #fff
     color #fff
     margin-bottom 2rem
-  & + .pagination
-    margin-left (40 / 750 * 100)%
-  
+  &--small
+    padding 1.7rem 3.5rem
 
 .flatpickr
   &-month

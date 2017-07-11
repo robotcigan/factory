@@ -9,25 +9,68 @@ html(lang="ru")
     link(rel="stylesheet", href="styles/css/vendor.css")
     link(rel="stylesheet", href="styles/css/main.css")
   body
-
-    header.main-header
+    
+    .headers
       .grid.grid--container
-        .row.row--sm-center
-          .col.col--sm-6
-            .logo
-              .logo__icon.main-header__logo
-              .logo__text МДС-МИКРО
-          .col.col--sm-3
-            .main-header__mode Режим работы: с 08:30 до 20:00
-          .col.col--sm-3
-            .main-header__phone +7 / 495 / 555 55 55
+        header.main-header
+          .row.row--sm-center
+            .col.col--sm-6
+              .logo
+                .logo__icon.main-header__logo
+                .logo__text МДС-МИКРО
+            .col.col--sm-3
+              .main-header__mode Режим работы: с 08:30 до 20:00
+            .col.col--sm-3
+              .main-header__phone +7 / 495 / 555 55 55
+
+        .nav-container
+          nav.nav
+            a(href="").nav__link О заводе
+            a(href="").nav__link Продукция и услуги
+            a(href="").nav__link Новости
+            a(href="").nav__link Статьи
+            a(href="").nav__link Контакты
+            .btn.nav__btn Задать вопрос
 
 
     main
       block content
 
     footer.main-footer
-      h1 footer
+      .grid.grid--container
+        .row
+          .col.col--sm-4
+            a(href="").main-footer__header-link Услуги
+            .main-footer__list
+              a(href="").main-footer__link Листообработка
+              a(href="").main-footer__link Механообработка
+              a(href="").main-footer__link Продажа микродвигателей
+              a(href="").main-footer__link Слесарная обработка
+              a(href="").main-footer__link Металлообработка  ЧПУ
+              a(href="").main-footer__link Изготовление деталей  на станках с ЧПУ
+              a(href="").main-footer__link Термообработка
+            a(href="").main-footer__header-link Доставка и оплата
+          .col.col--sm-4
+            a(href="").main-footer__header-link О предприятии
+            .main-footer__list
+              a(href="").main-footer__link Награды, сертификаты, лицензии
+              a(href="").main-footer__link Новости компании
+              a(href="").main-footer__link Статьи
+              a(href="").main-footer__link Наличие филиалов или предстоительств
+              a(href="").main-footer__link Публикации в СМИ
+              a(href="").main-footer__link Доставка и оплата
+              a(href="").main-footer__link Вопрос-ответ
+            a(href="").main-footer__header-link Контакты
+          .col.col--sm-4
+            a(href="").main-footer__header-link Представительство
+            p.main-footer__info 107023, Россия, г.Москва, ул. Площадь Журавлева 2, стр. 2. Офис 303, Офис 307
+            p.main-footer__info Тел. 8 (495) 96-43-075
+            p.main-footer__info Эл. почта: 
+              a(href="mailto:yauza-motors2-8@mail.ru").link yauza-motors2-8@mail.ru
+            a(href="").main-footer__header-link Представительство
+            p.main-footer__info 171505, Россия,Тверская обл., г.Кимры, ул. Старозаводская, 13
+            p.main-footer__info Эл. почта: 
+              a(href="mailto:info@mds-micro.ru").link info@mds-micro.ru
 
 
     script(src="./js/jquery.min.js")
