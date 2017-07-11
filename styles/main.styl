@@ -15,6 +15,7 @@
 @import 'modifications/modifications.styl'
 
 @import 'pages/index.styl'
+@import 'pages/inner.styl'
 
 .grid--container
   max-width 1146px
@@ -47,48 +48,10 @@
     font-weight 800
     text-align right
 
-.hero
-  background-color $main
-  height calc(100vh - 10rem)
-  max-height 80rem
-  margin-bottom 7rem
-  overflow hidden
-  position relative
-  &__video
-    opacity 0.5
-    position absolute
-    video
-      max-width 100%
-  &__container
-    align-items center
-    color #fff
-    display flex
-    height 100%
-    justify-content center
-    position relative
-    width 100%
-    z-index 50
-  &__content
-    padding 0 8rem
-  .logo
-    &__icon
-      background-image url('../../img/logo-white-big.png')
-      size(106px, 136px)
-    &__text
-      font-size 12.4rem
-      margin-top 2rem
-      margin-bottom 3.5rem
-      // transform translateY(.9rem)
-  &__subtitle
-    font-size 1.8rem
-    line-height 1.6
-    padding-left (208 / 1146 * 100)%
-
 .nav
   align-items center
   background-color $main
   display flex
-  justify-content space-between
   position absolute
   top 10.1rem
   z-index 100
@@ -98,10 +61,10 @@
     color #fff
     display block
     font-weight 600
-    padding 0 4rem
+    padding 2.2rem 4rem
     text-transform uppercase
     &:hover
-      color $primary
+      background-color $main + 10%
 
 .info-items
   margin-bottom 6rem
@@ -122,6 +85,15 @@
     font-weight 600
     opacity .7
     text-transform uppercase
+  &--big
+    .info
+      &__number
+        font-size 8rem
+      &__subtitle
+        font-size 1.8rem
+        font-weight 400
+        opacity initial
+        text-transform initial
 
 .main-footer
   background-color $light-gray
@@ -131,16 +103,19 @@
     display block
     font-size 2rem
     font-weight 500
-    margin-bottom 1.5rem
+    margin-bottom 2rem
     &:hover
       color $primary
-  &__list
+  &__block
     margin-bottom 3rem
   &__link
     display block
     margin-bottom 1.5rem
     &:hover
       color $primary
+  &__info
+    font-size 1.4rem
+    line-height 1.7
 
 @import 'base/media.styl'
 

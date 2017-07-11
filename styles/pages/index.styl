@@ -1,9 +1,57 @@
+.hero
+  background-color $main
+  height calc(100vh - 10rem)
+  max-height 80rem
+  margin-bottom 7rem
+  overflow hidden
+  position relative
+  &__video
+    opacity 0.5
+    position absolute
+    width 100%
+    video
+      max-width 100%
+      width 100%
+  &__container
+    align-items center
+    color #fff
+    display flex
+    height 100%
+    justify-content center
+    position relative
+    width 100%
+    z-index 50
+  &__content
+    padding 0 8rem
+  .logo
+    &__icon
+      background-image url('../../img/logo-white-big.png')
+      size(106px, 136px)
+    &__text
+      font-size 12.4rem
+      margin-top 2rem
+      margin-bottom 3.5rem
+      // transform translateY(.9rem)
+  &__subtitle
+    font-size 1.8rem
+    line-height 1.6
+    padding-left (208 / 1146 * 100)%
+
+
 .index
   &__section
     margin-bottom $main-offset
   .about
     font-size 2.2rem
     font-weight 300
+  &__info-img
+    position relative
+    transform translateY(-2rem)
+    .info
+      color #fff
+      left 6rem
+      position absolute
+      top 2rem
 
 .service
   align-items flex-end
@@ -71,7 +119,7 @@
         border-color transparent transparent transparent $light-gray
         height 0
         position absolute
-        top 2.4rem
+        top 2rem
         right -1.5rem
         width 0
     &__img

@@ -1,0 +1,79 @@
+.inner-wall
+  background-position top center
+  background-size cover
+  display block
+  height 41rem
+  margin-bottom 6rem
+  &__container
+    align-items center
+    color #fff
+    display flex
+    height 100%
+    transform translateY(3rem)
+  &__title
+    color #fff
+
+.inner
+  &__img
+    margin-bottom 3.5rem
+    img
+      display block
+      max-width 100%
+      & + .inner__sign
+        margin-top 2rem
+  &__sign
+    color $gray
+    display block
+    font-size 1.4rem
+  &__header
+    display flex
+    justify-content space-between
+
+.file
+  align-items center
+  color $primary
+  display flex
+  &__icon
+    margin-right 1.5rem
+  &__text
+    border-bottom 1px solid rgba($primary, .2)
+    transition all .4s
+  &:hover
+    .file
+      &__text
+        border-color rgba($primary, .7)
+
+.show-more
+  color $main
+  cursor pointer
+  text-decoration none
+  &__icon
+    display inline-block
+    margin-left .7rem
+    margin-right 1.5rem
+    position relative
+    vertical-align middle
+    transform translateY(-.5rem)
+    &:after
+      content ''
+      border 1px solid $main
+      border-radius 50%
+      circle(4rem)
+      left -.7rem
+      margin-right 1rem
+      position absolute
+      top -.2rem
+      text-align center
+    img
+      transform translateY(.5rem)
+  &__text
+    display inline-block
+    font-weight 600
+    vertical-align middle
+    text-transform uppercase
+  &:hover
+    text-decoration none
+
+
+
+
