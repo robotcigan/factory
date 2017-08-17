@@ -1,0 +1,16 @@
+.vacancy
+  display flex
+  justify-content space-between
+  margin-bottom 4rem
+  padding-bottom 4rem
+  &:not(:last-child)
+    border-bottom $border
+  &__title
+    font-size 2.4rem
+    margin-bottom 1rem
+
+@media(max-width 767px)
+  .vacancy
+    display block
+    &__container
+      margin-bottom 2rem

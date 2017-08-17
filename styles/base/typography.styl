@@ -29,7 +29,7 @@ p
   font-family $font-header
   font-size 3.2rem
   font-weight 800
-  line-height (36 / 22)
+  line-height 1.2
   margin-bottom 2rem
 
 .h4
@@ -39,6 +39,16 @@ p
   line-height (30 / 20)
   margin-bottom 1.5rem
   margin-top 0
+
+.h5
+  display inline-block
+  font-size 1.6rem
+  font-weight 500
+  line-height 1.2
+  letter-spacing .4px
+  margin-bottom 2.4rem
+  margin-top 0
+  text-transform uppercase
 
 .index,
 .inner
@@ -59,26 +69,6 @@ p
     font-weight 400
     line-height 1.6
     margin-bottom 3.5rem
-  ol,
-  ul
-    font-weight 300
-    line-height $line-height
-    padding-left 2rem
-    li
-      color $primary
-      margin-bottom 2rem
-      span,
-      p,
-      strong,
-      i
-        color $main
-      span
-        display block
-        margin-bottom 2rem
-    ul
-      list-style-type disc
-      ul
-        list-style-type circle
   blockquote
     color $primary
     display block
@@ -97,6 +87,30 @@ p
       top 0
       width 2px
 
+.inner
+  .p
+    & + ul
+      margin-top -2.4rem
+  ul
+    margin-bottom 2.4rem
+    padding-left 2rem
+    li
+      color $main
+      line-height 1.6
+      list-style-type none
+      margin-bottom .8rem
+      position relative
+      &:after
+        background-color $primary
+        circle(4px)
+        content ''
+        position absolute
+        left -1.9rem
+        top 12px
+  sup
+    font-size 60%
+    top -.7em
+
 .ul-offset
   padding-left 6rem !important
 
@@ -108,5 +122,7 @@ p
 .uppercase
   text-transform uppercase
 
-
+@media(max-width 500px)
+  .h3
+    line-height 1
 

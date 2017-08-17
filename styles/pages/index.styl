@@ -47,11 +47,17 @@
   &__info-img
     position relative
     transform translateY(-2rem)
+    img
+      display block
+      max-width 100%
     .info
       color #fff
       left 6rem
       position absolute
       top 2rem
+
+.main-page-img
+  transform translateX(-3rem)
 
 .service
   align-items flex-end
@@ -99,43 +105,150 @@
         transform translateX(-2rem)
 
 
+// .news
+//   align-items stretch
+//   display flex
+//   margin-bottom 4rem
+//   .new
+//     background-color $light-gray
+//     display flex
+//     max-width 50%
+//     &__container
+//       flex-shrink 0
+//       padding 3rem
+//       position relative
+//       width 50%
+//       &:after
+//         content ''
+//         display inline-block
+//         border-style solid
+//         border-width 12px 0 12px 16px
+//         border-color transparent transparent transparent $light-gray
+//         height 0
+//         position absolute
+//         top 2rem
+//         right -1.5rem
+//         width 0
+//     &__img
+//       background-position top center
+//       background-size cover
+//       background-repeat no-repeat
+//       flex-shrink 0
+//       min-height 24.5rem
+//       width 50%
+//     &__title
+//       font-size 2rem
+//       font-weight 500
+//       line-height 1.3
+//       margin-bottom 2rem
+//       text-transform uppercase
+//     &__anons
+//       font-size 1.4rem
+//       line-height 1.6
+
 .news
-  align-items stretch
-  display flex
-  margin-bottom 4rem
+  margin-bottom 3.2rem
+  margin-top 3.2rem
   .new
-    background-color $light-gray
-    display flex
     &__container
-      flex-shrink 0
-      padding 3rem
-      position relative
-      width 50%
-      &:after
-        content ''
-        display inline-block
-        border-style solid
-        border-width 12px 0 12px 16px
-        border-color transparent transparent transparent $light-gray
-        height 0
-        position absolute
-        top 2rem
-        right -1.5rem
-        width 0
+      min-height 15rem
     &__img
       background-position top center
       background-size cover
       background-repeat no-repeat
-      flex-shrink 0
-      width 50%
+      min-height 24rem
+      margin-bottom 1.6rem
     &__title
       font-size 2rem
       font-weight 500
       line-height 1.3
-      margin-bottom 2rem
+      margin-bottom 1.6rem
       text-transform uppercase
     &__anons
       font-size 1.4rem
       line-height 1.6
+    &__date
+      color $gray
 
 
+@media(max-width 1200px)
+  .hero
+    &__content
+      padding 0
+    &__video
+      background url('../../video/main.jpg')
+      background-size cover
+      height 100%
+      opacity .4
+      video
+        display none
+  .news
+    .new
+      &__container
+        padding 2rem
+
+@media(max-width 1000px)
+  .hero
+    height 40vh
+    .logo
+      &__text
+        font-size 8rem
+    &__subtitle
+      padding-left 0
+  .news
+    flex-wrap wrap
+    .new
+      &:first-child
+        margin-bottom 4rem
+      &__container
+        padding 5rem 3rem
+
+@media(max-width 767px)
+  .hero
+    height 25rem
+    .logo
+      &__icon
+        display none
+      &__text
+        font-size 6rem
+        margin 0
+        margin-bottom 2rem
+
+@media(max-width 700px)
+  .hero
+    height 35rem
+  .index
+    &__section
+      margin-bottom 8rem
+    &__info-img
+      // margin-top 4rem
+      // transform none
+      .info
+        color $main
+        left 2rem
+      img
+        display none
+  .news
+    .new
+      flex-direction column-reverse
+      order reverse
+      max-width initial
+      &__container
+        width 100%
+        &:after
+          display none
+      &__img
+        width 100%
+
+@media(max-width 550px)
+  .index
+    &__info-img
+      display none
+
+@media(max-width 350px)
+  .hero
+    .logo
+      &__text
+        font-size 3.2rem
+    &__subtitle
+      font-size 1.6rem

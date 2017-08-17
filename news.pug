@@ -1,0 +1,110 @@
+extends layout.pug
+
+
+block content
+  .inner-wall(style="background-image: url('./img/inner-image.jpg')")
+    .inner-wall__container
+      .grid.grid--container
+        h1.h1.inner-wall__title Вакансии
+  
+  .grid.grid--container
+    .inner
+      .row
+        .col.col--lg-8
+          h2.h3 Условия работы
+          p.p Оформление по ТК РФ График работы 5/2 с 07.00 до 16.00, перерыв на обед 1 час. <br> Окончательная заработная плата: по результатам собеседования.
+          h2.h3 Вакансии
+          .vacancies
+            .vacancy
+              .vacancy__container
+                .vacancy__title Маляр (Работа с нитрокраской и эмалями)
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Токарь универсал 16к20, дип 300, дип 500
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Слесарь механосборочных работ 3-5 разряда
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Оператор станка с ЧПУ (фрезерный, токарный, электроэрозионный)
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Мастер участка механообработки
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Инженер ОТК
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Инженер-технолог
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+            .vacancy
+              .vacancy__container
+                .vacancy__title Вспомогательный рабочий
+                .vacancy__price от 25 000 ₽
+              .vacancy__btn
+                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+        .col.col--lg-3.col--lg-offset-1
+          .person.person--offset-fix
+            .person__img
+              img(src="./img/marketolog.jpg", alt="")
+            .person__name Смирнова Любовь
+            .person__role Cекретарь
+            .person__phone +7 48236 4-64-67
+
+
+  #vacancy.modal
+    .modal__title Откликнуться на вакансию
+    .modal__plate Мастер участка механаобработки
+    form.form
+      .form-control
+        label Как вас зовут?
+        input(type="text")
+      .form-control
+        label Телефон
+        input(type="tel").phone-mask
+      .form-control
+        label Город
+        input(type="text")
+      .checkbox.mini-offset
+        input(type="checkbox" id="checkbox")
+        label(for="checkbox").checkbox__label
+        label.checkbox__text(for="checkbox") Я согласен на обработку 
+          a(href="").link персональных данных
+      .row
+        .col.col--sm-6
+          .form-control
+            input(type="text")
+        .col.col--sm-6
+          img(src="./img/captcha.png", alt="")
+      .row.row--sm-center
+        .col.col--sm-6
+          label.show-more.file-upload
+            .show-more__icon
+              img(src="./img/show-more.png", alt="")
+            .show-more__text Приложить анкету
+            input(type="file")
+        .col.col--sm-6
+          a(href="/anketa.doc" download).link Скачать образец анкеты
+      button.btn Откликнуться
+
+

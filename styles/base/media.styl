@@ -6,6 +6,8 @@
 @media (max-width: 767px)
   .row
     margin 0 -2%
+  .wf
+    margin-bottom 2.4rem
 
 @media(max-width 1200px)
   body
@@ -13,26 +15,29 @@
       cursor pointer
 
 .mobile-header
-  background-color $primary
+  background-color $main
   display none
-  height 9rem
+  height 7rem
   margin-bottom 0
   position relative
   padding 1rem 0
   transition transform .4s ease
   width 100%
   .logo
-    background url('../../img/logo-white.png') no-repeat
-    // background-size contain
-    height 6rem
-    width 11rem
+    &__icon
+      background url('../../img/logo-white.png') no-repeat
+      background-size contain
+      margin-right 0
+      transform translateX(-1rem)
+    &__text
+      color #fff
 
 .mobile-menu-toggle
   cursor pointer
   display none
   position absolute
   right 3rem
-  top 4rem
+  top 2.8rem
   size(12px, 15px)
   transition transform .4s ease
   &:before
@@ -67,39 +72,52 @@
         top 5px
 
 .mobile-menu
-  background-color $primary
+  background-color $main
   color #fff
   display none
   border-top 1px solid rgba(#fff, .1)
-  padding-bottom 4rem
-  padding-top 4rem
+  padding 4rem 1rem
   &__links
     display block
     margin-bottom 4rem
   &__link
-    margin-bottom 2rem
+    margin-bottom 2.5rem
     a
-      border-bottom 1px solid rgba(#fff, .2)
       color #fff
       display inline-block
-      font-size 1.8rem
+      font-size 2rem
       font-weight 600
       text-decoration none
+      text-transform uppercase
   .btn
     margin-top 1rem
-    margin-bottom 3rem
+    margin-bottom 3.5rem
+  .contact
+    &__phone
+      font-size 2.4rem
+      font-weight 600
+      margin-bottom 2rem
 
-
-@media(max-width 1140px)
+@media(max-width 1200px)
   .grid--container
     max-width 96%
+  .main-header
+    .logo
+      &__text
+        display none
 
-@media(max-width 1024px)
+@media(max-width 960px)
   .main-header
     display none
   .mobile-header
     display block
   .mobile-menu-toggle
     display block
-  .navigation
+  .nav
     display none
+
+@media(max-width 420px)
+  .mobile-header
+    .logo
+      &__text
+        font-size 2rem

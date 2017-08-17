@@ -1,0 +1,112 @@
+extends layout.pug
+
+
+block content
+  .inner-wall(style="background-image: url('./img/inner-image.jpg')")
+    .inner-wall__container
+      .grid.grid--container
+        h1.h1.inner-wall__title Оценка условий труда
+  
+  .grid.grid--container
+    .inner
+      .row
+        .col.col--lg-8
+          h2.h3 Факторы производственной среды
+          p.p Эксперты испытательной лаборатории ООО «Эталон-АРМ» Соколов А.В. (сертификат эксперта 0001140 от 26.03.15 г.), Пирязев А.В. (сертификат эксперта 0001141 от 26.03.15 г.) провели, в соответствии с договором №15/Ч/07, идентификацию и измерения (исследования) факторов производственно среды и трудового процесса на рабочих местах ОАО «МДС-Микро».
+          p.p На обследованных рабочих местах выявлено соответствие с ст. 12 Федерального закона от 28.12.2013 г. №426-ФЗ «О специальной оценке условий труда».
+          h2.h3 Документация оценки
+          p.p Более подробная информация оценки условий труда указана в приложенных документах:
+          .row
+            .col.col--sm-6
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Аттестат аккредитации эксперта
+                  .file__size PDF, 420 KB
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Уведомление о регистрации в реестре организаций, проводящих специальную оценку условий труда
+                  .file__size PDF, 420 KB
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Область аккредитации
+                  .file__size PDF, 420 KB
+            .col.col--sm-6
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Свидетельство эксперта
+                  .file__size PDF, 420 KB
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Экспертное заключение
+                  .file__size PDF, 420 KB
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Отчет о проведении специально оценки условий труда
+                  .file__size PDF, 420 KB
+          h5.h5 Оценка условий труда рабочих мест
+          .row
+            .col.col--sm-6
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Рабочее место №1
+                  .file__size PDF, 420 KB
+            .col.col--sm-6
+              a(href="" download).file
+                .file__icon
+                  img(src="./img/pdf.jpg", alt="")
+                .file__content
+                  .file__title Рабочее место №2
+                  .file__size PDF, 420 KB
+          .accordion
+            .accordion__content
+              .row
+                .col.col--sm-6
+                  -for(var i = 3; i < 22; i++)
+                    a(href="" download).file
+                      .file__icon
+                        img(src="./img/pdf.jpg", alt="")
+                      .file__content
+                        .file__title Рабочее место №#{i}
+                        .file__size PDF, 420 KB
+                .col.col--sm-6
+                  -for(var i = 22; i < 41; i++)
+                    a(href="" download).file
+                      .file__icon
+                        img(src="./img/pdf.jpg", alt="")
+                      .file__content
+                        .file__title Рабочее место №#{i}
+                        .file__size PDF, 420 KB
+            .accordion__btn
+              .show-more
+                .show-more__icon
+                  img(src="./img/show-more.png", alt="")
+                .show-more__text Показать еще
+
+
+        .col.col--lg-3.col--lg-offset-1
+          .person.person--offset-fix
+            .person__img
+              img(src="./img/marketolog.jpg", alt="")
+            .person__name Смирнова Любовь
+            .person__role Cекретарь
+            .person__phone +7 48236 4-64-67
+
+
+
+
+
+
