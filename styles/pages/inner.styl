@@ -13,6 +13,8 @@
   &__title
     color #fff
     max-width 75rem
+    &--small
+      font-size 4rem
 
 .inner
   &__img
@@ -86,6 +88,8 @@
     position relative
     vertical-align middle
     transform translateY(-.5rem)
+    .minus
+      display none
     &:after
       content ''
       border 1px solid $main
@@ -124,6 +128,7 @@
 
 ul.inner-nav
   border $border
+  margin-top 0
   padding-left 0
   li
     border-bottom $border

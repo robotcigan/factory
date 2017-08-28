@@ -5,66 +5,30 @@ block content
   .inner-wall(style="background-image: url('./img/inner-image.jpg')")
     .inner-wall__container
       .grid.grid--container
-        h1.h1.inner-wall__title Вакансии
+        h1.h1.inner-wall__title Новости
   
   .grid.grid--container
     .inner
       .row
         .col.col--lg-8
-          h2.h3 Условия работы
-          p.p Оформление по ТК РФ График работы 5/2 с 07.00 до 16.00, перерыв на обед 1 час. <br> Окончательная заработная плата: по результатам собеседования.
-          h2.h3 Вакансии
-          .vacancies
-            .vacancy
-              .vacancy__container
-                .vacancy__title Маляр (Работа с нитрокраской и эмалями)
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Токарь универсал 16к20, дип 300, дип 500
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Слесарь механосборочных работ 3-5 разряда
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Оператор станка с ЧПУ (фрезерный, токарный, электроэрозионный)
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Мастер участка механообработки
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Инженер ОТК
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Инженер-технолог
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
-            .vacancy
-              .vacancy__container
-                .vacancy__title Вспомогательный рабочий
-                .vacancy__price от 25 000 ₽
-              .vacancy__btn
-                a(href="#vacancy").btn.btn--small.modal-open Откликнуться
+          .news.row
+            - for (var i = 0; i < 2; i++)
+              .col.col--md-6
+                a(href="").new
+                  .new__img(style="background-image: url(./img/news-1.jpg)")
+                  .new__container
+                    .new__title Равнение на чистый алюминий
+                    .new__anons Продукция предприятия под брендом «MDS» поставлялась в Россию, Америку и в страны Европы – Великобританию и Польшу.
+                  .new__date 12 августа
+              .col.col--md-6
+                a(href="").new
+                  .new__img(style="background-image: url(./img/news-2.jpg)")
+                  .new__container
+                    .new__title Новые станки для ЧПУ обработки
+                    .new__anons Более современное оборудование позволит специалистам компании создавать металлические изделия на заказ в кратчайшие сроки
+                  .new__date 8 августа
         .col.col--lg-3.col--lg-offset-1
-          .person.person--offset-fix
+          .person
             .person__img
               img(src="./img/marketolog.jpg", alt="")
             .person__name Смирнова Любовь

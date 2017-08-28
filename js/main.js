@@ -50,8 +50,12 @@ $(document).ready(function() {
     $(this).closest('.accordion').find('.accordion__content').slideToggle();
     if ($(this).find('.show-more__text').text() === 'Показать еще') {
       $(this).find('.show-more__text').text('Скрыть');
+      $(this).find('.plus').hide();
+      $(this).find('.minus').show();
     } else {
       $(this).find('.show-more__text').text('Показать еще');
+      $(this).find('.plus').show();
+      $(this).find('.minus').hide();
     }
   });
 
@@ -76,5 +80,16 @@ $(document).ready(function() {
       showMaskOnHover: false
     });
   }
+
+  // Заголовок на внутряках
+  if ( $('.inner-wall__title').text().length > 80 ) {
+    $('.inner-wall__title').addClass('inner-wall__title--small');
+  }
+
+  // faq
+  $('.faq').on('click', function () {
+    $(this).toggleClass('faq--active')
+    $(this).find('.faq__text').slideToggle();
+  })
 
 });

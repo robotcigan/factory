@@ -1,0 +1,30 @@
+extends layout.pug
+
+
+block content
+  .inner-wall(style="background-image: url('./img/inner-image.jpg')")
+    .inner-wall__container
+      .grid.grid--container
+        h1.h1.inner-wall__title Часто задаваемые вопросы
+
+  .grid.grid--container
+    .inner
+      .row
+        .col.col--lg-8
+          - for (var i = 0; i < 5; i++)
+            .faq
+              .faq__container
+                .faq__icon
+                  i.fa.fa-angle-down
+                .faq__title Как купить большую партию микродвигателей
+              .faq__text Изолируя область наблюдения от посторонних шумов, мы сразу увидим, что химическое соединение излучает взрыв. При погружении в жидкий кислород химическое соединение вращает лептон. Возмущение плотности, в рамках ограничений классической механики, усиливает изобарический вихрь.
+
+
+        .col.col--lg-3.col--lg-offset-1
+          .person
+            .person__img
+              img(src="./img/marketolog.jpg", alt="")
+            .person__name Смирнова Любовь
+            .person__role Cекретарь
+            .person__phone +7 48236 4-64-67
+

@@ -1,0 +1,20 @@
+.sitemap
+  &__link
+    display block
+    margin-bottom .8rem
+    padding-left 1.6rem
+    a
+      link()
+      color $main
+      line-height 1.4
+    &--big
+      font-family $font-header
+      font-weight 800
+      font-size 3.2rem
+      margin-bottom 1.6rem
+      padding-left 0
+
+@media(max-width 767px)
+  .sitemap
+    &__link
+      padding-left 0
